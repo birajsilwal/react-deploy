@@ -105,7 +105,6 @@ export default function Banner() {
   return (
     <div>
       <div className={classes.main}>
-        <Header />
         <div className={classes.main1}>
           <section className={classes.glass}>
             <div className={classes.dashboard}>

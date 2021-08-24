@@ -12,13 +12,8 @@ export default function Home() {
   return (
     <div>
       <div>
-
         <NewBanner />
-        {/* <Banner /> */}
-
-        {/* main containers in the home page */}
         <main>   
-          {/* <AboutMe /> */}
           <Experience />
           <Portfolio />
           <GithubStat />

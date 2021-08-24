@@ -23,7 +23,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* <Header /> */}
+        <Header />
         <IconBarHeader />
         <Switch>
           <Route exact path="/" component={Home} />

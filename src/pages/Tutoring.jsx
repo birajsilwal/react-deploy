@@ -25,7 +25,6 @@ export default function Tutoring() {
 
   return (
     <div>
-      <Header />
       <div class="container">
         <h4 class="pt-2">My tutoring hours @ UNM ESS </h4>
         <h4 class="pb-4">Spring 2021</h4>
