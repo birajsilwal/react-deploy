@@ -1,30 +1,29 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Home from "./pages/Home";
+import Home from "./pages/index";
 import Resume from "./pages/Resume";
 import Tutoring from "./pages/Tutoring";
 import More from "./pages/More";
 import test from "./pages/test";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import Header from "./components/Header";
 import IconBarHeader from "./components/IconBarHeader";
 import ReactGA from "react-ga";
 
 function App() {
-
-  ReactGA.initialize('UA-142536391-1', {
-    
+  ReactGA.initialize("UA-142536391-1", {
     gaOptions: {
-      siteSpeedSampleRate: 100
-  }
+      siteSpeedSampleRate: 100,
+    },
   });
-  ReactGA.pageview("/HomePage")
+  ReactGA.pageview("/HomePage");
 
   return (
-    <Router>  
+    <Router>
       <div className="App">
-        <Header />
+        {/* <Header /> */}
         <IconBarHeader />
         <Switch>
           <Route exact path="/" component={Home} />
@@ -32,6 +31,8 @@ function App() {
           <Route exact path="/tutoring" component={Tutoring} />
           <Route exact path="/more" component={More} />
           <Route exact path="/test" component={test} />
+          {/* <Route exact path="/ReactWebsite" component={Home} /> */}
+          <Redirect from="/ReactWebsite" to="/" />
         </Switch>
       </div>
     </Router>

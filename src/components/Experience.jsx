@@ -1,11 +1,11 @@
-import React from 'react'
-import "bootstrap/dist/css/bootstrap.min.css";
-import ExperienceCss from "../css/Experience.module.css";
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ExperienceCss from '../css/Experience.module.css';
 import { BsBriefcaseFill } from 'react-icons/bs';
 import { MdLocationOn } from 'react-icons/md';
 import { BsCalendarFill } from 'react-icons/bs';
 
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Container from '@material-ui/core/Container';
@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'white',
   },
   container: {
-    padding: theme.spacing(5, 0)
+    padding: theme.spacing(5, 0),
   },
   containerTextAlign: {
     textAlign: 'left',
@@ -32,38 +32,70 @@ const useStyles = makeStyles((theme) => ({
     '& > .MuiGrid-root': {
       padding: theme.spacing(2, 3),
       [theme.breakpoints.up('lg')]: {
-        padding: theme.spacing(2, 0, 2, 15)
+        padding: theme.spacing(2, 0, 2, 15),
       },
     },
   },
-}))
+}));
 
-
-export default function Experience (props) {
+export default function Experience(props) {
   const classes = useStyles();
 
   return (
-    <div>   
+    <div>
       {/* EXPERIENCE */}
       <section className={classes.section}>
-        <Container className={classes.container} maxWidth='false'>
+        <Container className={classes.container} maxWidth="false">
           <h2>EXPERIENCE</h2>
           {/* <br></br> */}
-          <Grid 
-            className={classes.parentGrid} 
-            container 
-            justify="center">
-            
+          <Grid className={classes.parentGrid} container justify="center">
+            <Grid item lg={12} container justify="center">
+              <Grid item lg={5} md={7} xs={12}>
+                <Paper elevation={0} className={classes.paper}>
+                  <h4 class={ExperienceCss.h4}>Research Intern</h4>
+                  <h5 class="exp-comp">
+                    <BsBriefcaseFill /> Purdue University{' '}
+                  </h5>
+                </Paper>
+              </Grid>
+              <Grid item lg={2} xs={12} sm={12} md={2}>
+                <Paper elevation={0} className={classes.paper}>
+                  <div>
+                    <div>
+                      <MdLocationOn /> Remote
+                    </div>
+                    <div>
+                      <BsCalendarFill /> June 2021 - July 2021
+                    </div>
+                  </div>
+                </Paper>
+              </Grid>
+            </Grid>
+
             <Grid item lg={12} container justify="center">
               <Grid item lg={5} md={7} xs={12}>
                 <Paper elevation={0} className={classes.paper}>
                   <h4 class={ExperienceCss.h4}>App Developer</h4>
-                  <h5 class="exp-comp"><BsBriefcaseFill /> UNM Engineering Student Success Center </h5>
+                  <h5 class="exp-comp">
+                    <BsBriefcaseFill /> UNM Engineering Student Success Center{' '}
+                  </h5>
                   <ul class="exp-ul">
-                    <li>Developed Progressive Web Application (PWA) using React framework (Next.js) as a frontend, MongoDB as a backend, and Parse Server as a BaaS (Note: initially built with Vue.js)</li>
-                    <li>Created and conducted user interviews and questionnaires to identify and analyze current user experiences and pain points</li>
+                    <li>
+                      Developed Progressive Web Application (PWA) using React framework (Next.js) as a frontend, MongoDB
+                      as a backend, and Parse Server as a BaaS (Note: initially built with Vue.js)
+                    </li>
+                    <li>
+                      Created and conducted user interviews and questionnaires to identify and analyze current user
+                      experiences and pain points
+                    </li>
                     <li>Used agile software engineering methods to enhance the UI/UX of an app</li>
-                    <li>Deployed an app (<a href="https://success.unm.edu" target="_blank" rel="noopener noreferrer">success.unm.edu</a>) to Amazon Web Services (AWS) EC2 instance.</li>
+                    <li>
+                      Deployed an app (
+                      <a href="https://success.unm.edu" target="_blank" rel="noopener noreferrer">
+                        success.unm.edu
+                      </a>
+                      ) to Amazon Web Services (AWS) EC2 instance.
+                    </li>
                     <li>Planned, designed, and programmed the UI/UX with a 95% user satisfaction rating</li>
                   </ul>
                 </Paper>
@@ -71,21 +103,29 @@ export default function Experience (props) {
               <Grid item lg={2} xs={12} sm={12} md={2}>
                 <Paper elevation={0} className={classes.paper}>
                   <div>
-                    <div><MdLocationOn/> Albuquerque, NM</div>
-                    <div><BsCalendarFill /> Apr 2020 - <strong>Present</strong></div>
+                    <div>
+                      <MdLocationOn /> Albuquerque, NM
+                    </div>
+                    <div>
+                      <BsCalendarFill /> Apr 2020 - <strong>Present</strong>
+                    </div>
                   </div>
                 </Paper>
               </Grid>
             </Grid>
 
-
-            <Grid item lg={12 } container justify="center">
+            <Grid item lg={12} container justify="center">
               <Grid item lg={5} md={7} xs={12}>
                 <Paper elevation={0} className={classes.paper}>
                   <h4 class={ExperienceCss.h4}>Teaching Assistant</h4>
-                  <h5 class="exp-comp"><BsBriefcaseFill /> Department of Computer Science, University of New Mexico </h5>
+                  <h5 class="exp-comp">
+                    <BsBriefcaseFill /> Department of Computer Science, University of New Mexico{' '}
+                  </h5>
                   <ul class="exp-ul">
-                    <li>Engage with students per week to explain concepts regarding Object-Oriented Programming System, Exception Handling, Java Collections, and JavaFX</li>
+                    <li>
+                      Engage with students per week to explain concepts regarding Object-Oriented Programming System,
+                      Exception Handling, Java Collections, and JavaFX
+                    </li>
                     <li>Hold office hours, grade assignments, and answer student questions</li>
                   </ul>
                 </Paper>
@@ -93,162 +133,226 @@ export default function Experience (props) {
               <Grid item lg={2} xs={12} sm={12} md={2}>
                 <Paper elevation={0} className={classes.paper}>
                   <div>
-                    <div><MdLocationOn/> Albuquerque, NM</div>
-                    <div><BsCalendarFill /> August 2020 - <strong>Present</strong></div>
+                    <div>
+                      <MdLocationOn /> Albuquerque, NM
+                    </div>
+                    <div>
+                      <BsCalendarFill /> August 2020 - <strong>Present</strong>
+                    </div>
                   </div>
                 </Paper>
               </Grid>
             </Grid>
 
-
-            <Grid item lg={12 } container justify="center">
+            <Grid item lg={12} container justify="center">
               <Grid item lg={5} md={7} xs={12}>
                 <Paper elevation={0} className={classes.paper}>
                   <h4 class={ExperienceCss.h4}>Tutor</h4>
-                  <h5 class="exp-comp"><BsBriefcaseFill /> UNM Engineering Student Success Center </h5>
+                  <h5 class="exp-comp">
+                    <BsBriefcaseFill /> UNM Engineering Student Success Center{' '}
+                  </h5>
                   <ul class="exp-ul">
                     <li>Holds group and one-on-one tutoring sessions.</li>
-                    <li>Courses: JAVA, Python, Discrete mathematics, Data structures and algorithms, Data organization, Calc I, Calc II, Linear algebra, Elements of mathematical statistics and probability, 
-                      Physics I and II </li>
-                  </ul> 
+                    <li>
+                      Courses: JAVA, Python, Discrete mathematics, Data structures and algorithms, Data organization,
+                      Calc I, Calc II, Linear algebra, Elements of mathematical statistics and probability, Physics I
+                      and II{' '}
+                    </li>
+                  </ul>
                 </Paper>
               </Grid>
               <Grid item lg={2} xs={12} sm={12} md={2}>
                 <Paper elevation={0} className={classes.paper}>
                   <div>
-                    <div><MdLocationOn/> Albuquerque, NM</div>
-                    <div><BsCalendarFill /> August 2020 - <strong>Present</strong></div>
+                    <div>
+                      <MdLocationOn /> Albuquerque, NM
+                    </div>
+                    <div>
+                      <BsCalendarFill /> August 2020 - <strong>Present</strong>
+                    </div>
                   </div>
                 </Paper>
               </Grid>
             </Grid>
 
-
-            <Grid item lg={12 } container justify="center">
+            <Grid item lg={12} container justify="center">
               <Grid item lg={5} md={7} xs={12}>
                 <Paper elevation={0} className={classes.paper}>
                   <h4 class={ExperienceCss.h4}>Lab Assistant</h4>
-                  <h5 class="exp-comp"><BsBriefcaseFill /> UNM Moses Biological Computation Lab  </h5>
+                  <h5 class="exp-comp">
+                    <BsBriefcaseFill /> UNM Moses Biological Computation Lab{' '}
+                  </h5>
                   <ul class="exp-ul">
-                    <li>Collaborated with a team of two other graduate students to build a machine learning model that classifies and recognizes AprilTag image using the Convolutional Neural Network (CNN) algorithm</li>
+                    <li>
+                      Collaborated with a team of two other graduate students to build a machine learning model that
+                      classifies and recognizes AprilTag image using the Convolutional Neural Network (CNN) algorithm
+                    </li>
                     <li>Trained the system with over 10,000 images resulting in a 80% performance accuracy</li>
-                  </ul> 
+                  </ul>
                 </Paper>
               </Grid>
               <Grid item lg={2} xs={12} sm={12} md={2}>
                 <Paper elevation={0} className={classes.paper}>
                   <div>
-                    <div><MdLocationOn/> Albuquerque, NM</div>
-                    <div><BsCalendarFill /> Oct 2019 - <strong>Present</strong></div>
+                    <div>
+                      <MdLocationOn /> Albuquerque, NM
+                    </div>
+                    <div>
+                      <BsCalendarFill /> Oct 2019 - <strong>Present</strong>
+                    </div>
                   </div>
                 </Paper>
               </Grid>
             </Grid>
 
-
-            <Grid item lg={12 } container justify="center">
+            <Grid item lg={12} container justify="center">
               <Grid item lg={5} md={7} xs={12}>
                 <Paper elevation={0} className={classes.paper}>
                   <h4 class={ExperienceCss.h4}>IT Assistant</h4>
-                  <h5 class="exp-comp"><BsBriefcaseFill /> The University of New Mexico </h5>
+                  <h5 class="exp-comp">
+                    <BsBriefcaseFill /> The University of New Mexico{' '}
+                  </h5>
                   <ul class="exp-ul">
-                    <li>Used QUERY and other Google Sheets formulas connecting multiple sheets to manage student-related data of 60-80 students.</li>
-                    <li>Designed User Interface (UI) of student profile dashboard by creating different charts in Google Sheets to track student's academic progress.</li>
+                    <li>
+                      Used QUERY and other Google Sheets formulas connecting multiple sheets to manage student-related
+                      data of 60-80 students.
+                    </li>
+                    <li>
+                      Designed User Interface (UI) of student profile dashboard by creating different charts in Google
+                      Sheets to track student's academic progress.
+                    </li>
                     <li>Ensured users are highly satisfied; Met and exceeded expectations</li>
-                  </ul> 
+                  </ul>
                 </Paper>
               </Grid>
               <Grid item lg={2} xs={12} sm={12} md={2}>
                 <Paper elevation={0} className={classes.paper}>
                   <div>
-                    <div><MdLocationOn/> Albuquerque, NM</div>
-                    <div><BsCalendarFill /> May 2019 - Aug 2020</div>
+                    <div>
+                      <MdLocationOn /> Albuquerque, NM
+                    </div>
+                    <div>
+                      <BsCalendarFill /> May 2019 - Aug 2020
+                    </div>
                   </div>
                 </Paper>
               </Grid>
             </Grid>
 
-
-
-            <Grid item lg={12 } container justify="center">
+            <Grid item lg={12} container justify="center">
               <Grid item lg={5} md={7} xs={12}>
                 <Paper elevation={0} className={classes.paper}>
                   <h4 class={ExperienceCss.h4}>Research Assistant</h4>
-                  <h5 class="exp-comp"><BsBriefcaseFill /> St. Ambrose University </h5>
+                  <h5 class="exp-comp">
+                    <BsBriefcaseFill /> St. Ambrose University{' '}
+                  </h5>
                   <ul class="exp-ul">
-                    <li>Assisted Dr. Robert Mitchell with improving performance and precision of the calculation to find the distance of supernovae in other galaxies using Expanding Photosphere Method (EPM) while processing the spectroscopic data into MATLAB code</li>
-                    <li>Facilitated by creating new programs and improving existing programs in MATLAB to increase precision for calculating wavelengths of different elements</li>
-                    <li>Performed debugging/troubleshooting of code to ensure it delivers expected results when plotting data</li>
-                  </ul> 
+                    <li>
+                      Assisted Dr. Robert Mitchell with improving performance and precision of the calculation to find
+                      the distance of supernovae in other galaxies using Expanding Photosphere Method (EPM) while
+                      processing the spectroscopic data into MATLAB code
+                    </li>
+                    <li>
+                      Facilitated by creating new programs and improving existing programs in MATLAB to increase
+                      precision for calculating wavelengths of different elements
+                    </li>
+                    <li>
+                      Performed debugging/troubleshooting of code to ensure it delivers expected results when plotting
+                      data
+                    </li>
+                  </ul>
                 </Paper>
               </Grid>
               <Grid item lg={2} xs={12} sm={12} md={2}>
                 <Paper elevation={0} className={classes.paper}>
                   <div>
-                    <div><MdLocationOn/> Davenport, IA</div>
-                    <div><BsCalendarFill /> July - Aug 2018</div>
+                    <div>
+                      <MdLocationOn /> Davenport, IA
+                    </div>
+                    <div>
+                      <BsCalendarFill /> July - Aug 2018
+                    </div>
                   </div>
                 </Paper>
               </Grid>
             </Grid>
 
-
-            <Grid item lg={12 } container justify="center">
+            <Grid item lg={12} container justify="center">
               <Grid item lg={5} md={7} xs={12}>
                 <Paper elevation={0} className={classes.paper}>
                   <h4 class={ExperienceCss.h4}>Mentor</h4>
-                  <h5 class="exp-comp"><BsBriefcaseFill /> Alcoa Learning Center </h5>
+                  <h5 class="exp-comp">
+                    <BsBriefcaseFill /> Alcoa Learning Center{' '}
+                  </h5>
                   <ul class="exp-ul">
-                    <li>Worked closely with senior mentors and students to facilitate the designing and construction process of the robot</li>
-                    <li>Used C programming language to control the robot via joystick and successfully made it autonomous to traverse 4.5 ft. carrying, lifting, and dropping a box into 5 ft. high plate</li>
-                    <li>Optimized parts of the robot efficiently to build it under the budget, weight, and size limit to meet the standard of FIRST ROBOTICS competition</li>
+                    <li>
+                      Worked closely with senior mentors and students to facilitate the designing and construction
+                      process of the robot
+                    </li>
+                    <li>
+                      Used C programming language to control the robot via joystick and successfully made it autonomous
+                      to traverse 4.5 ft. carrying, lifting, and dropping a box into 5 ft. high plate
+                    </li>
+                    <li>
+                      Optimized parts of the robot efficiently to build it under the budget, weight, and size limit to
+                      meet the standard of FIRST ROBOTICS competition
+                    </li>
                   </ul>
                 </Paper>
-              </Grid> 
+              </Grid>
               <Grid item lg={2} xs={12} sm={12} md={2}>
                 <Paper elevation={0} className={classes.paper}>
                   <div>
-                    <div><MdLocationOn/> Bettendorf, IA</div>
-                    <div><BsCalendarFill /> Feb - Dec 2018</div>
+                    <div>
+                      <MdLocationOn /> Bettendorf, IA
+                    </div>
+                    <div>
+                      <BsCalendarFill /> Feb - Dec 2018
+                    </div>
                   </div>
-                </Paper>  
+                </Paper>
               </Grid>
             </Grid>
 
-
-            <Grid item lg={12 } container justify="center">
+            <Grid item lg={12} container justify="center">
               <Grid item lg={5} md={7} xs={12}>
                 <Paper elevation={0} className={classes.paper}>
                   <h4 class={ExperienceCss.h4}>President</h4>
-                  <h5 class="exp-comp"><BsBriefcaseFill /> GoldenGate Robotics Club </h5>
+                  <h5 class="exp-comp">
+                    <BsBriefcaseFill /> GoldenGate Robotics Club{' '}
+                  </h5>
                   <ul class="exp-ul">
-                    <li>Led a team of up to 7 students to create four science projects: Solar Plane Assuring Safety Aviation (SPASA), Garbage Power Plant - generating electricity from garbage, Concentrated Solar Thermal Power Plant</li>
+                    <li>
+                      Led a team of up to 7 students to create four science projects: Solar Plane Assuring Safety
+                      Aviation (SPASA), Garbage Power Plant - generating electricity from garbage, Concentrated Solar
+                      Thermal Power Plant
+                    </li>
                   </ul>
                 </Paper>
               </Grid>
               <Grid item lg={2} xs={12} sm={12} md={2}>
                 <Paper elevation={0} className={classes.paper}>
                   <div>
-                    <div><MdLocationOn/> Kathmandu, Nepal</div>
-                    <div><BsCalendarFill /> Aug 2013 - May 2015</div>
+                    <div>
+                      <MdLocationOn /> Kathmandu, Nepal
+                    </div>
+                    <div>
+                      <BsCalendarFill /> Aug 2013 - May 2015
+                    </div>
                   </div>
                 </Paper>
               </Grid>
             </Grid>
-
-
           </Grid>
         </Container>
-
-
 
         {/* <div className={classes.containerTextAlign} >
           
             <div>
             <div> */}
-            {/* <div class="row justify-content-center" > */}
-              {/* App Developer */}
-              {/* <div>
+        {/* <div class="row justify-content-center" > */}
+        {/* App Developer */}
+        {/* <div>
                 <div class="col-md-7 col-sm-8">
                   <h4 class={ExperienceCss.h4}>Teaching Assistant</h4>
                   <h5 class="exp-comp"><BsBriefcaseFill /> Department of Computer Science, University of New Mexico </h5>
@@ -265,8 +369,8 @@ export default function Experience (props) {
                 </div>
               </div> */}
 
-              {/* Grader */}
-              {/* <div>
+        {/* Grader */}
+        {/* <div>
                 <div class="col-md-7 col-sm-8">
                   <h4 class={ExperienceCss.h4}>Teaching Assistant</h4>
                   <h5 class="exp-comp"><BsBriefcaseFill /> Department of Computer Science, University of New Mexico </h5>
@@ -283,8 +387,8 @@ export default function Experience (props) {
                 </div>
               </div> */}
 
-              {/* Tutor */}
-              {/* <div>
+        {/* Tutor */}
+        {/* <div>
                 <div class="col-md-7 col-sm-8">
                   <h4 class={ExperienceCss.h4}>Tutor</h4>
                   <h5 class="exp-comp"><BsBriefcaseFill /> UNM Engineering Student Success Center </h5>
@@ -305,8 +409,8 @@ export default function Experience (props) {
                 </div>
               </div> */}
 
-              {/* Lab Assistant */}
-              {/* <div>
+        {/* Lab Assistant */}
+        {/* <div>
                 <div class="col-md-7 col-sm-8">
                   <h4 class={ExperienceCss.h4}>Lab Assistant</h4>
                   <h5 class="exp-comp"><BsBriefcaseFill /> UNM Moses Biological Computation Lab  </h5>
@@ -323,9 +427,8 @@ export default function Experience (props) {
                 </div>
               </div> */}
 
-
-              {/* <!-- IT Assistant --> */}
-              {/* <div>
+        {/* <!-- IT Assistant --> */}
+        {/* <div>
                 <div class="col-md-7 col-sm-8">
                   <h4 class={ExperienceCss.h4}>IT Assistant</h4>
                   <h5 class="exp-comp"><BsBriefcaseFill /> The University of New Mexico </h5>
@@ -343,9 +446,8 @@ export default function Experience (props) {
                 </div>
               </div> */}
 
-
-              {/* <!-- Research Assistant at SAU --> */}
-              {/* <div>
+        {/* <!-- Research Assistant at SAU --> */}
+        {/* <div>
                 <div class="col-md-7 col-sm-8">
                   <h4 class={ExperienceCss.h4}>Research Assistant</h4>
                   <h5 class="exp-comp"><BsBriefcaseFill /> St. Ambrose University </h5>
@@ -363,8 +465,8 @@ export default function Experience (props) {
                 </div>
               </div> */}
 
-              {/* <!-- Mentor --> */}
-              {/* <div>
+        {/* <!-- Mentor --> */}
+        {/* <div>
                 <div class="col-md-7 col-sm-8">
                   <h4 class={ExperienceCss.h4}>Mentor</h4>
                   <h5 class="exp-comp"><BsBriefcaseFill /> Alcoa Learning Center </h5>
@@ -381,10 +483,9 @@ export default function Experience (props) {
                   </div>
                 </div>
               </div> */}
-          
 
-              {/* <!-- Robotics Club --> */}
-              {/* <div>
+        {/* <!-- Robotics Club --> */}
+        {/* <div>
                 <div class="col-md-7 col-sm-8">
                   <h4 class={ExperienceCss.h4}>President</h4>
                   <h5 class="exp-comp"><BsBriefcaseFill /> GoldenGate Robotics Club </h5>
@@ -400,8 +501,8 @@ export default function Experience (props) {
                 </div>
               </div> */}
 
-              {/* <!-- Comment about job --> */}
-                {/* <div class="col-md-7 col-sm-8">
+        {/* <!-- Comment about job --> */}
+        {/* <div class="col-md-7 col-sm-8">
                   <h4 class={ExperienceCss.h4}>Job Title</h4>
                   <h5 class="exp-comp"><BsBriefcaseFill /> Employer </h5>
                   <ul class="exp-ul">
@@ -416,10 +517,10 @@ export default function Experience (props) {
                     <div class="exp-date"><BsCalendarFill /> Date</div>
                   </div>
                 </div> */}
-              {/* </div>
+        {/* </div>
           </div>
         </div> */}
       </section>
     </div>
-  )
+  );
 }

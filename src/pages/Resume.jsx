@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from "react-bootstrap/Button";
 import { css } from '@emotion/css';
+import Header from '../components/Header'
 
 export default function Resume() {
 
@@ -15,6 +16,7 @@ export default function Resume() {
 
   return (
     <div>
+      <Header />
       <h3>Biraj Silwal's Resume</h3>
       <p className={pInResume}>Last updated on 10th Jan 2021.</p>
       <p className={ `${pInResume} pb-5`}>You can download my resume &nbsp;
